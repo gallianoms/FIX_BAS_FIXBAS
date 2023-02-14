@@ -1,0 +1,28 @@
+{
+  "name": "fix_bas_fixbas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gallianoms/FIX_BAS_FIXBAS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gallianoms/FIX_BAS_FIXBAS/issues"
+  },
+  "homepage": "https://github.com/gallianoms/FIX_BAS_FIXBAS#readme",
+  "devDependencies": {
+    "jest": "^29.4.2"
+  },
+  "dependencies": {
+    "@types/jest": "^29.4.0",
+    "ts-node": "^10.9.1"
+  }
+}

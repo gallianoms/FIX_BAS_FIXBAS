@@ -4,19 +4,19 @@ export {}
 //* IF NUM / 5 => BUZZ
 //* IF (NUM / 3) AND (NUM / 5) => FIZZBUZZ
 
-const fizzbuzz = num => {
+const fizzbuzz = (num: number): string | number => {
   if (num === 0) {
     return 0
   }
 
   if (isDiv3(num) && isDiv5(num)) {
-    return 'fizzbazz'
+    return 'fizzbuzz'
   }
   if (isDiv3(num)) {
     return 'fizz'
   }
   if (isDiv5(num)) {
-    return 'bazz'
+    return 'buzz'
   }
 
   return num
@@ -53,3 +53,5 @@ const isDiv5 = (num: number) => {
 }
 
 print()
+
+module.exports = fizzbuzz

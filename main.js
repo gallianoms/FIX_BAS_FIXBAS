@@ -8,13 +8,13 @@ var fizzbuzz = function (num) {
         return 0;
     }
     if (isDiv3(num) && isDiv5(num)) {
-        return 'fizzbazz';
+        return 'fizzbuzz';
     }
     if (isDiv3(num)) {
         return 'fizz';
     }
     if (isDiv5(num)) {
-        return 'bazz';
+        return 'buzz';
     }
     return num;
 };
@@ -42,3 +42,4 @@ var isDiv5 = function (num) {
     return false;
 };
 print();
+module.exports = fizzbuzz;
