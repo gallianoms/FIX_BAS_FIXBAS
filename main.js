@@ -3,20 +3,24 @@ exports.__esModule = true;
 //* IF NUM / 3 => FIZZ
 //* IF NUM / 5 => BUZZ
 //* IF (NUM / 3) AND (NUM / 5) => FIZZBUZZ
-var main = function () {
+var fizzbuzz = function (num) {
+    if (num === 0) {
+        return 0;
+    }
+    if (isDiv3(num) && isDiv5(num)) {
+        return 'fizzbazz';
+    }
+    if (isDiv3(num)) {
+        return 'fizz';
+    }
+    if (isDiv5(num)) {
+        return 'bazz';
+    }
+    return num;
+};
+var print = function () {
     for (var i = 0; i <= 100; i++) {
-        if (isDiv3(i) && isDiv5(i)) {
-            console.log("".concat(i, " => FIZZBUZZ"));
-        }
-        else if (isDiv3(i)) {
-            console.log("".concat(i, " => FIZZ"));
-        }
-        else if (isDiv5(i)) {
-            console.log("".concat(i, " => BUZZ"));
-        }
-        else {
-            console.log("".concat(i));
-        }
+        console.log("".concat(i, ": ").concat(fizzbuzz(i)));
     }
 };
 var isDiv3 = function (num) {
@@ -37,4 +41,4 @@ var isDiv5 = function (num) {
     }
     return false;
 };
-main();
+print();

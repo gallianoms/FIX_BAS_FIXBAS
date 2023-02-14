@@ -4,17 +4,27 @@ export {}
 //* IF NUM / 5 => BUZZ
 //* IF (NUM / 3) AND (NUM / 5) => FIZZBUZZ
 
-const main = () => {
+const fizzbuzz = num => {
+  if (num === 0) {
+    return 0
+  }
+
+  if (isDiv3(num) && isDiv5(num)) {
+    return 'fizzbazz'
+  }
+  if (isDiv3(num)) {
+    return 'fizz'
+  }
+  if (isDiv5(num)) {
+    return 'bazz'
+  }
+
+  return num
+}
+
+const print = () => {
   for (let i = 0; i <= 100; i++) {
-    if (isDiv3(i) && isDiv5(i)) {
-      console.log(`${i} => FIZZBUZZ`)
-    } else if (isDiv3(i)) {
-      console.log(`${i} => FIZZ`)
-    } else if (isDiv5(i)) {
-      console.log(`${i} => BUZZ`)
-    } else {
-      console.log(`${i}`)
-    }
+    console.log(`${i}: ${fizzbuzz(i)}`)
   }
 }
 
@@ -42,4 +52,4 @@ const isDiv5 = (num: number) => {
   return false
 }
 
-main()
+print()
