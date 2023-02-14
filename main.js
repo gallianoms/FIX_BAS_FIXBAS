@@ -1,18 +1,21 @@
 "use strict";
 exports.__esModule = true;
-//* IF NUM / 3 => FIX
-//* IF NUM / 5 => BAS
-//* IF (NUM / 3) AND (NUM / 5) => FIXBAS
+//* IF NUM / 3 => FIZZ
+//* IF NUM / 5 => BUZZ
+//* IF (NUM / 3) AND (NUM / 5) => FIZZBUZZ
 var main = function () {
     for (var i = 0; i <= 100; i++) {
         if (isDiv3(i) && isDiv5(i)) {
-            console.log("".concat(i, " => FIXBAS"));
+            console.log("".concat(i, " => FIZZBUZZ"));
         }
         else if (isDiv3(i)) {
-            console.log("".concat(i, " => FIX"));
+            console.log("".concat(i, " => FIZZ"));
         }
         else if (isDiv5(i)) {
-            console.log("".concat(i, " => BAS"));
+            console.log("".concat(i, " => BUZZ"));
+        }
+        else {
+            console.log("".concat(i));
         }
     }
 };

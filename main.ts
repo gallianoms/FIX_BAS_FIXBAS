@@ -1,17 +1,19 @@
 export {}
 
-//* IF NUM / 3 => FIX
-//* IF NUM / 5 => BAS
-//* IF (NUM / 3) AND (NUM / 5) => FIXBAS
+//* IF NUM / 3 => FIZZ
+//* IF NUM / 5 => BUZZ
+//* IF (NUM / 3) AND (NUM / 5) => FIZZBUZZ
 
 const main = () => {
   for (let i = 0; i <= 100; i++) {
     if (isDiv3(i) && isDiv5(i)) {
-      console.log(`${i} => FIXBAS`)
+      console.log(`${i} => FIZZBUZZ`)
     } else if (isDiv3(i)) {
-      console.log(`${i} => FIX`)
+      console.log(`${i} => FIZZ`)
     } else if (isDiv5(i)) {
-      console.log(`${i} => BAS`)
+      console.log(`${i} => BUZZ`)
+    } else {
+      console.log(`${i}`)
     }
   }
 }
